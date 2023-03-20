@@ -16,21 +16,24 @@ pytest_plugins = ["pytest_profiling"]
 [tool.poetry]
 name = "prospector-profile-duplicated"
 version = "0.0.0"
-description = "Profile that can be used to disable the dupplicated or conflict rules between Prospector and other tools"
+description = "Profile that can be used to disable the duplicated or conflict rules between Prospector and other tools"
 readme = "README.md"
 authors = ["Stéphane Brunner <stephane.brunner@gmail.com>"]
 homepage = "https://github.com/sbrunner/prospector-profile-duplicated"
 repository = "https://github.com/sbrunner/prospector-profile-duplicated"
-license = "BSD"
+license = "BSD-2-Clause"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: BSD-2-Clause",
+  "License :: OSI Approved :: BSD License",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3"
 ]
-packages = [{ include = "prospector_profile_duplicated" }, { include = "prospector_profile_duplicated/*.yaml" }]
+packages = [
+  { include = "prospector_profile_duplicated" },
+  { include = "prospector_profile_duplicated/*.yaml" }
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning", "poetry-plugin-tweak-dependencies-version"]

@@ -46,4 +46,3 @@ pyflakes:
     - F401 # unused import, done by PyLint: unused-import
     - F811 # redefinition of unused, done by PyLint: redefined-outer-name
     - F632 # use ==/!= to compare constant literals, done by pyupgrade
-
