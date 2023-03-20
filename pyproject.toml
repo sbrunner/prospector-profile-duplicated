@@ -1,0 +1,44 @@
+[tool.black]
+line-length = 110
+target-version = ["py38"]
+
+[tool.mypy]
+python_version = 3.8
+ignore_missing_imports = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+strict = true
+
+[tool.pytest.ini_options]
+pytest_plugins = ["pytest_profiling"]
+
+[tool.poetry]
+name = "prospector-profile-conflict"
+version = "0.0.0"
+description = "Profile that can be sued to remove the conflict or dupplicated rules between Prospector and other tools"
+readme = "README.md"
+authors = ["Stéphane Brunner <stephane.brunner@gmail.com>"]
+homepage = "https://github.com/sbrunner/prospector-profile-conflict"
+repository = "https://github.com/sbrunner/prospector-profile-conflict"
+license = "BSD"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD-2-Clause",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning", "poetry-plugin-tweak-dependencies-version"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+pattern = "^((?P<epoch>\\d+)!)?(?P<base>\\d+(\\.\\d+)*)"
+
+[tool.poetry-plugin-tweak-dependencies-version]
+default = "present"
