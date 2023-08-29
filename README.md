@@ -5,6 +5,13 @@ external tools like and Black, isort and docformatter.
 
 The profile considers that you are using Pylint, pyupgrade, Black, isort and docformatter and remove conflict or duplicate with them.
 
+## Usage
+
+```yaml
+inherits:
+  - duplicated
+```
+
 ## Contributing
 
 Install the pre-commit hooks:
