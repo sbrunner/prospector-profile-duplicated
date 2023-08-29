@@ -4,6 +4,8 @@ pylint:
   disable:
     - superfluous-parens # Unnecessary parens after 'if' keyword
     - trailing-newlines # Trailing newlines
+    - trailing-whitespace # Trailing whitespace
+    - line-too-long # Line too long
 
 pycodestyle:
   disable:
