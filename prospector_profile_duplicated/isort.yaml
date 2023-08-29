@@ -1,0 +1,7 @@
+# Checks that's automatically be fixed by isort
+
+pylint:
+  disable:
+    - reimported
+    - ungrouped-imports # Imports from package are not grouped
+    - wrong-import-order

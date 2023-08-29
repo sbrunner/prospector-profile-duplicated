@@ -1,0 +1,3 @@
+pydocstyle:
+  disable:
+    - D413 # Missing blank line after last section, in conflict with docformatter

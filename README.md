@@ -9,7 +9,14 @@ The profile considers that you are using Pylint, pyupgrade, Black, isort and doc
 
 ```yaml
 inherits:
+  # Get All
   - duplicated
+  # Get for individual tools
+  - duplicated:black
+  - duplicated:isort
+  - duplicated:pyupgrade
+  - duplicated:pylint
+  - duplicated:docformatter
 ```
 
 ## Contributing

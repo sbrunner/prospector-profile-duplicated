@@ -1,0 +1,12 @@
+# Checks that's also done by PyLint
+
+pydocstyle:
+  disable:
+    - D100 # Missing docstring in public module, with: missing-module-docstring
+    - D101 # Missing docstring in public class, with: missing-class-docstring
+    - D103 # Missing docstring in public function, with: missing-function-docstring
+
+pyflakes:
+  disable:
+    - F401 # unused import, with: unused-import
+    - F811 # redefinition of unused, with: redefined-outer-name

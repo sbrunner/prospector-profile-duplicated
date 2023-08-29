@@ -1,0 +1,29 @@
+# Checks that's automatically be fixed by Black
+
+pylint:
+  disable:
+    - superfluous-parens # Unnecessary parens after 'if' keyword
+    - trailing-newlines # Trailing newlines
+
+pycodestyle:
+  disable:
+    - E201 # whitespace after '('
+    - E202 # whitespace before ')'
+    - E203 # whitespace before ':'
+    - E211 # whitespace before '('
+    - E225 # missing whitespace around operator
+    - E231 # missing whitespace after ':'
+    - E251 # unexpected spaces around keyword / parameter equals
+    - E252 # missing whitespace around parameter equals
+    - E261 # at least two spaces before inline comment
+    - E271 # multiple spaces after keyword
+    - E272 # multiple spaces before keyword
+    - E275 # missing whitespace after keyword
+    - E301 # expected 1 blank line
+    - E302 # expected 2 blank lines
+    - E303 # too many blank lines
+    - E304 # blank lines found after function decorator
+    - E305 # expected 2 blank lines after class or function definition
+    - E501 # line too long
+    - W291 # trailing whitespace
+    - W391 # blank line at end of file
