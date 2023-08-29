@@ -1,48 +1,6 @@
-pylint:
-  disable:
-    - superfluous-parens # Unnecessary parens after 'if' keyword, done by Black
-    - trailing-newlines # Trailing newlines, done by Black
-    - reimported # Reimport, done by isort
-    - ungrouped-imports # Imports from package unittest are not grouped, done by isort
-    - wrong-import-order # done by isort
-    - useless-object-inheritance # Class '...' inherits from object, can be safely removed from bases in python3, done by pyupgrade
-    - deprecated-class # Using deprecated class, done by pyupgrade
-    - deprecated-module # Deprecated module, done by pyupgrade
-    - deprecated-method # Using deprecated method, done by pyupgrade
-    - consider-using-set-comprehension # Consider using a set comprehension, done by pyupgrade
-    - consider-using-dict-comprehension # Consider using a dictionary comprehension, done by pyupgrade
-    - super-with-arguments # Consider using Python 3 style super() without arguments, done by pyupgrade
-    - consider-using-f-string # Consider using an f-string, done by pyupgrade
-
-pycodestyle:
-  disable:
-    - E201 # whitespace after '(', done by Black
-    - E202 # whitespace before ')', done by Black
-    - E203 # whitespace before ':', done by Black
-    - E211 # whitespace before '(', done by Black
-    - E225 # missing whitespace around operator, done by Black
-    - E231 # missing whitespace after ':', done by Black
-    - E251 # unexpected spaces around keyword / parameter equals, done by Black
-    - E252 # missing whitespace around parameter equals, done by Black
-    - E271 # multiple spaces after keyword, done by Black
-    - E272 # multiple spaces before keyword, done by Black
-    - E275 # missing whitespace after keyword, done by Black
-    - E302 # expected 2 blank lines, done by Black
-    - E303 # too many blank lines, done by Black
-    - E304 # blank lines found after function decorator, done by Black
-    - E305 # expected 2 blank lines after class or function definition, done by Black
-    - W391 # blank line at end of file, done by Black
-
-pydocstyle:
-  disable:
-    - D100 # Missing docstring in public module, done by PyLint: missing-module-docstring
-    - D101 # Missing docstring in public class, done by PyLint: missing-class-docstring
-    - D103 # Missing docstring in public function, done by PyLint: missing-function-docstring
-    - W503 # line break before binary operator, done by pyupgrade
-    - D413 # Missing blank line after last section, in conflict with docformatter
-
-pyflakes:
-  disable:
-    - F401 # unused import, done by PyLint: unused-import
-    - F811 # redefinition of unused, done by PyLint: redefined-outer-name
-    - F632 # use ==/!= to compare constant literals, done by pyupgrade
+inherits:
+  - duplicated:black
+  - duplicated:isort
+  - duplicated:pyupgrade
+  - duplicated:pylint
+  - duplicated:docformatter

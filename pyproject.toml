@@ -32,7 +32,12 @@ classifiers = [
 ]
 packages = [
   { include = "prospector_profile_duplicated" },
-  { include = "prospector_profile_duplicated/*.yaml" }
+  { include = "prospector_profile_duplicated/prospector.yaml" },
+  { include = "prospector_profile_duplicated/black.yaml" },
+  { include = "prospector_profile_duplicated/isort.yaml" },
+  { include = "prospector_profile_duplicated/pyupgrade.yaml" },
+  { include = "prospector_profile_duplicated/pylint.yaml" },
+  { include = "prospector_profile_duplicated/docformatter.yaml" },
 ]
 
 [build-system]

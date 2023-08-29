@@ -1,0 +1,20 @@
+# Checks that's automatically be fixed by pyupgrade
+
+pylint:
+  disable:
+    - useless-object-inheritance # Class '...' inherits from object, can be safely removed from bases in python3
+    - deprecated-class # Using deprecated class
+    - deprecated-module # Deprecated module
+    - deprecated-method # Using deprecated method
+    - consider-using-set-comprehension # Consider using a set comprehension
+    - consider-using-dict-comprehension # Consider using a dictionary comprehension
+    - super-with-arguments # Consider using Python 3 style super() without arguments
+    - consider-using-f-string # Consider using an f-string
+
+pydocstyle:
+  disable:
+    - W503 # line break before binary operator
+
+pyflakes:
+  disable:
+    - F632 # use ==/!= to compare constant literals
