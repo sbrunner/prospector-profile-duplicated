@@ -24,7 +24,7 @@ repos:
       - id: copyright
       - id: workflows-require-timeout
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.2
+    rev: v2.2.6
     hooks:
       - id: codespell
   - repo: https://github.com/pre-commit/mirrors-prettier
@@ -36,7 +36,7 @@ repos:
           - prettier-plugin-sh@0.13.1 # npm
           - prettier-plugin-toml@0.4.0 # npm
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.9.0.2
+    rev: v0.9.0.6
     hooks:
       - id: shellcheck
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
@@ -49,7 +49,7 @@ repos:
       - id: check-github-workflows
       - id: check-renovate
         additional_dependencies:
-          - pyjson5==1.6.2 # pypi
+          - pyjson5==1.6.4 # pypi
       - id: check-github-actions
       - id: check-jsonschema
         name: Check GitHub Workflows set timeout-minutes
@@ -60,7 +60,7 @@ repos:
           - --builtin-schema
           - github-workflows-require-timeout
   - repo: https://github.com/sirwart/ripsecrets
-    rev: v0.1.5
+    rev: v0.1.7
     hooks:
       - id: ripsecrets
   - repo: https://github.com/psf/black
