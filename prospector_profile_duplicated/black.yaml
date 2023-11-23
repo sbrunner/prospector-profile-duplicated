@@ -7,6 +7,10 @@ pylint:
     - trailing-whitespace # Trailing whitespace
     - line-too-long # Line too long
 
+pydocstyle:
+  disable:
+    - D200 # one-line docstring should fit on one line with quotes
+
 pycodestyle:
   disable:
     - E201 # whitespace after '('

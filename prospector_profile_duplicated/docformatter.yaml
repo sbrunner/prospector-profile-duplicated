@@ -1,3 +1,4 @@
 pydocstyle:
   disable:
     - D413 # Missing blank line after last section, in conflict with docformatter
+    - D203 # 1 blank line required before class docstring, in conflict with D204
