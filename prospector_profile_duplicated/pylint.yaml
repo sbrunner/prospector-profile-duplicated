@@ -6,6 +6,7 @@ pydocstyle:
     - D101 # Missing docstring in public class, with: missing-class-docstring
     - D102 # Missing docstring in public method, with: missing-function-docstring
     - D103 # Missing docstring in public function, with: missing-function-docstring
+    - N806 # Variable in function should be lowercase, with: invalid-name
 
 pycodestyle:
   disable:
