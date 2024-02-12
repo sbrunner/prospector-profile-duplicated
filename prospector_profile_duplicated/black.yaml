@@ -13,6 +13,7 @@ pydocstyle:
 
 pycodestyle:
   disable:
+    - E124 # closing bracket does not match visual indentation
     - E201 # whitespace after '('
     - E202 # whitespace before ')'
     - E203 # whitespace before ':'
