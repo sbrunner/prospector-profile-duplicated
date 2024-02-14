@@ -4,3 +4,4 @@ inherits:
   - duplicated:pyupgrade
   - duplicated:pylint
   - duplicated:docformatter
+  - duplicated:autoflake
