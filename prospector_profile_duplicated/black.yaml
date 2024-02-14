@@ -33,4 +33,5 @@ pycodestyle:
     - E305 # expected 2 blank lines after class or function definition
     - E501 # line too long
     - W291 # trailing whitespace
+    - W293 # blank line contains whitespace
     - W391 # blank line at end of file
