@@ -10,6 +10,7 @@ pylint:
 pydocstyle:
   disable:
     - D200 # one-line docstring should fit on one line with quotes
+    - D204 # 1 blank line required after class docstring
 
 pycodestyle:
   disable:
