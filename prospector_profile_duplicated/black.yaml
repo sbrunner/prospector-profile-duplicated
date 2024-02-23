@@ -14,7 +14,14 @@ pydocstyle:
 
 pycodestyle:
   disable:
+    - E111 # over-indented
+    - E112 # continuation line missing indentation or outdented
+    - E113 # unexpected indentation
+    - E121 # continuation line under-indented for hanging indent
+    - E122 # continuation line missing indentation or outdented
+    - E126 # continuation line over-indented for hanging indent
     - E124 # closing bracket does not match visual indentation
+    - E128 # continuation line under-indented for visual indent
     - E201 # whitespace after '('
     - E202 # whitespace before ')'
     - E203 # whitespace before ':'

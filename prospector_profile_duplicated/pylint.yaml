@@ -9,7 +9,9 @@ pydocstyle:
 
 pycodestyle:
   disable:
+    - E112 # expected an indented block, with: syntax-error
     - E722 # do not use bare 'except', with: bare-except
+    - E901 # IndentationError: unindent does not match any outer indentation level, with: syntax-error
     - N806 # Variable in function should be lowercase, with: invalid-name
 
 pyflakes:
