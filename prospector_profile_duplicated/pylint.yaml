@@ -18,3 +18,4 @@ pyflakes:
   disable:
     - F401 # unused import, with: unused-import
     - F811 # redefinition of unused, with: redefined-outer-name
+    - F841 # local variable is assigned to but never used, with unused-variable
