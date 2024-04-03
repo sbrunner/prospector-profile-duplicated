@@ -5,3 +5,4 @@ inherits:
   - duplicated:pylint
   - duplicated:docformatter
   - duplicated:autoflake
+  - duplicated:pydocstyle
