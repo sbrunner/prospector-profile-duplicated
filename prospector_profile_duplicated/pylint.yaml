@@ -13,6 +13,7 @@ pycodestyle:
     - E722 # do not use bare 'except', with: bare-except
     - E901 # IndentationError: unindent does not match any outer indentation level, with: syntax-error
     - N802 # function name should be lowercase, with: invalid-name
+    - N803 # argument name should be lowercase, with: invalid-name
     - N806 # Variable in function should be lowercase, with: invalid-name
 
 pyflakes:
