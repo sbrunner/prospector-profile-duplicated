@@ -6,6 +6,7 @@ pylint:
     - trailing-newlines # Trailing newlines
     - trailing-whitespace # Trailing whitespace
     - line-too-long # Line too long
+    - bad-indentation # Bad indentation
 
 pydocstyle:
   disable:
@@ -17,15 +18,18 @@ pycodestyle:
     - E111 # over-indented
     - E112 # continuation line missing indentation or outdented
     - E113 # unexpected indentation
+    - E117 # over-indented
     - E121 # continuation line under-indented for hanging indent
     - E122 # continuation line missing indentation or outdented
-    - E126 # continuation line over-indented for hanging indent
     - E124 # closing bracket does not match visual indentation
+    - E126 # continuation line over-indented for hanging indent
+    - E127 # continuation line over-indented for visual indent
     - E128 # continuation line under-indented for visual indent
     - E201 # whitespace after '('
     - E202 # whitespace before ')'
     - E203 # whitespace before ':'
     - E211 # whitespace before '('
+    - E222 # multiple spaces after operator
     - E225 # missing whitespace around operator
     - E227 # missing whitespace around bitwise or shift operator
     - E231 # missing whitespace after ':'
