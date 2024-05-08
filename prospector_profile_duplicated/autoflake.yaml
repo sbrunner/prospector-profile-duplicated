@@ -1,3 +1,5 @@
 pylint:
   disable:
-    - unused-import # Unused import
+    []
+    # autoflake didn't thread all the unused imports
+    # - unused-import # Unused import
