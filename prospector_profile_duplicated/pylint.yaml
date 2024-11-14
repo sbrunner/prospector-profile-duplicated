@@ -21,3 +21,9 @@ pyflakes:
     - F401 # unused import, with: unused-import
     - F811 # redefinition of unused, with: redefined-outer-name
     - F841 # local variable is assigned to but never used, with unused-variable
+
+ruff:
+  disable:
+    - B904 # Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling [See: https://docs.astral.sh/ruff/rules/raise-without-from-inside-except]
+    - S602 # `subprocess` call with `shell=True` identified, security issue [See: https://docs.astral.sh/ruff/rules/subprocess-popen-with-shell-equals-true]
+    - SIM115 # Use a context manager for opening files [See: https://docs.astral.sh/ruff/rules/open-file-with-context-handler]
