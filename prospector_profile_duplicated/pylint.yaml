@@ -25,5 +25,13 @@ pyflakes:
 ruff:
   disable:
     - B904 # Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling [See: https://docs.astral.sh/ruff/rules/raise-without-from-inside-except]
+    - E722 # Do not use bare `except` [See: https://docs.astral.sh/ruff/rules/bare-except]
     - S602 # `subprocess` call with `shell=True` identified, security issue [See: https://docs.astral.sh/ruff/rules/subprocess-popen-with-shell-equals-true]
+    - S603 # `subprocess` call: check for execution of untrusted input [See: https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true]
+    - S607 # Starting a process with a partial executable path [See: https://docs.astral.sh/ruff/rules/start-process-with-partial-path]-
     - SIM115 # Use a context manager for opening files [See: https://docs.astral.sh/ruff/rules/open-file-with-context-handler]
+
+bandit:
+  disable:
+    - B603 # subprocess call - check for execution of untrusted input.
+    - B607 # Starting a process with a partial executable path
