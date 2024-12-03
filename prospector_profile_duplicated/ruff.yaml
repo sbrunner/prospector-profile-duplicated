@@ -1,0 +1,9 @@
+inherits:
+  - duplicated:black
+  - duplicated:isort
+  - duplicated:pyupgrade
+  - duplicated:autoflake
+
+bandit:
+  disable:
+    - B110 # Try, Except, Pass detected.
