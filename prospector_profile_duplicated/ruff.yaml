@@ -4,10 +4,6 @@ inherits:
   - duplicated:pyupgrade
   - duplicated:autoflake
 
-pydocstyle:
-  disable:
-    - D203 # 1 blank line required before class docstring
-
 bandit:
   disable:
     - B110 # Try, Except, Pass detected.
