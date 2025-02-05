@@ -1,5 +1,0 @@
-pylint:
-  disable:
-    []
-    # autoflake didn't thread all the unused imports
-    # - unused-import # Unused import
