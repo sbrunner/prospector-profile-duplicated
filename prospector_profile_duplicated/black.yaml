@@ -51,3 +51,7 @@ pycodestyle:
     - W291 # trailing whitespace
     - W293 # blank line contains whitespace
     - W391 # blank line at end of file
+
+ruff:
+  disable:
+    Q000: # Single quotes found but double quotes preferred
