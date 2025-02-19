@@ -7,11 +7,18 @@ pylint:
     - trailing-whitespace # Trailing whitespace
     - line-too-long # Line too long
     - bad-indentation # Bad indentation
+    - syntax-error # Combination from pycodestyle E112: continuation line missing indentation or outdented
+    - C0322 # Combination from pycodestyle E225: missing whitespace around operator
+    - bad-whitespace # Combination from pycodestyle E225: missing whitespace around operator
+    - C0323 # Combination from pycodestyle E225: missing whitespace around operator
+    - C0324 # Combination from pycodestyle E231: missing whitespace after ':'
 
 pydocstyle:
   disable:
     - D200 # one-line docstring should fit on one line with quotes
     - D204 # 1 blank line required after class docstring
+    - D207 # Combination from pylint bad-indentation: Bad indentation
+    - D208 # Combination from pylint bad-indentation: Bad indentation
 
 pycodestyle:
   disable:
@@ -51,8 +58,48 @@ pycodestyle:
     - W291 # trailing whitespace
     - W293 # blank line contains whitespace
     - W391 # blank line at end of file
+    - D202 # Combination from ruff D202: No blank lines allowed after function docstring
+    - E901 # Combination from pyflakes F999: Combination from pycodestyle E112: continuation line missing indentation or outdented
 
 ruff:
   disable:
-    Q000: # Single quotes found but double quotes preferred
-    I001: # Import block is un-sorted or un-formatted
+    - Q000 # Single quotes found but double quotes preferred
+    - I001 # Import block is un-sorted or un-formatted
+    - W293 # Blank line contains whitespace
+    - D202 # No blank lines allowed after function docstring
+    - D207 # Combination from pylint bad-indentation: Bad indentation
+    - D208 # Combination from pylint bad-indentation: Bad indentation
+    - F999 # Combination from pycodestyle E112: continuation line missing indentation or outdented
+
+pep257:
+  disable:
+    - D202 # Combination from ruff D202: No blank lines allowed after function docstring
+    - D207 # Combination from pylint bad-indentation: Bad indentation
+    - D208 # Combination from pylint bad-indentation: Bad indentation
+
+pep8:
+  disable:
+    - W291 # Combination from pylint trailing-whitespace: Trailing whitespace
+    - W293 # Combination from pylint trailing-whitespace: Trailing whitespace
+    - E501 # Combination from pylint line-too-long: Line too long
+    - E111 # Combination from pylint bad-indentation: Bad indentation
+    - E901 # Combination from pycodestyle E112: continuation line missing indentation or outdented
+    - E225 # Combination from pycodestyle E225: missing whitespace around operator
+    - E231 # Combination from pycodestyle E231: missing whitespace after ':'
+    - E251 # Combination from pycodestyle E251: unexpected spaces around keyword / parameter equals
+
+dodgy:
+  disable:
+    - diff # Combination from pycodestyle E112: continuation line missing indentation or outdented
+
+pyflakes:
+  disable:
+    - F999 # Combination from pycodestyle E112: continuation line missing indentation or outdented
+
+mccabe:
+  disable:
+    - MC0000 # Combination from pycodestyle E112: continuation line missing indentation or outdented
+
+frosted:
+  disable:
+    - E402 # Combination from pycodestyle E112: continuation line missing indentation or outdented

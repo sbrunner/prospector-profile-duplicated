@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+import argparse
+from pathlib import Path
+
+import ruamel.yaml.comments
+import ruamel.yaml.tokens
+
+
+def main() -> None:
+    """Complete the profiles from the Prospector blendings."""
+
+    parser = argparse.ArgumentParser(
+        description="Complete the profiles from the Prospector blender configuration."
+    )
+    parser.add_argument(
+        "--input",
+        type=Path,
+        help="Input file with the Prospector blender combinations.",
+        default=Path("~/workspace/prospector/prospector/blender_combinations.yaml"),
+    )
+    args = parser.parse_args()
+
+    yaml = ruamel.yaml.YAML()
+
+    with args.input.expanduser().resolve().open() as file:
+        combinations = yaml.load(file)
+
+    combination_tool_code = {}
+    for combinations in combinations["combinations"]:
+        for combination in combinations:
+            for tool, code in combination.items():
+                combination_tool_code.setdefault(tool, {}).setdefault(code, []).append(combinations)
+
+    for path in Path("prospector_profile_duplicated").glob("*.yaml"):
+        print(path)
+        with path.open() as file:
+            content = yaml.load(file)
+
+        if content is None:
+            continue
+
+        for tool in ("ruff", "pylint", "pydocstyle", "pycodestyle", "pyflakes", "bandit"):
+            if tool not in content:
+                continue
+
+            tool_content_disable = content[tool].get("disable", [])
+            for index, disable in enumerate(tool_content_disable):
+                if disable not in combination_tool_code.get(tool, {}):
+                    continue
+                for combinations in combination_tool_code[tool][disable]:
+                    for combination in combinations:
+                        for new_tool, code in combination.items():
+                            if new_tool == tool:
+                                continue
+                            if code in content.get(new_tool, {}).get("disable", []):
+                                continue
+                            print("Find combination", new_tool, code, "from", tool, disable)
+
+                            content.setdefault(new_tool, {}).setdefault(
+                                "disable", ruamel.yaml.comments.CommentedSeq()
+                            ).append(code)
+                            # add a comment
+                            comment = f"Combination from {tool} {disable}"
+                            if tool_content_disable.ca.items.get(index):
+                                ca_object = tool_content_disable.ca.items.get(index)[0]
+                                if ca_object.value:
+                                    comment = f"{comment}: {tool_content_disable.ca.items.get(index)[0].value.lstrip('# ')}"
+                            content[new_tool]["disable"].yaml_add_eol_comment(
+                                comment, len(content[new_tool]["disable"]) - 1
+                            )
+
+        with path.open("w") as file:
+            yaml.dump(content, file)
+
+
+if __name__ == "__main__":
+    main()
