@@ -50,7 +50,6 @@ def main() -> None:
                 for combinations in combination_tool_code[tool][disable]:
                     for combination in combinations:
                         for new_tool, code in combination.items():
-
                             if new_tool == tool:
                                 continue
                             if code in content.get(new_tool, {}).get("disable", []):
