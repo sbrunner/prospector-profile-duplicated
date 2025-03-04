@@ -69,7 +69,6 @@ ruff:
     - D202 # No blank lines allowed after function docstring
     - D207 # Combination from pylint bad-indentation: Bad indentation
     - D208 # Combination from pylint bad-indentation: Bad indentation
-    - F999 # Combination from pycodestyle E112: continuation line missing indentation or outdented
 
 pep257:
   disable:
