@@ -1,3 +1,2 @@
 inherits:
-  - duplicated:black
-  - duplicated:isort
+  - duplicated:ruff

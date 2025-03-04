@@ -1,0 +1,7 @@
+inherits:
+  - duplicated:black
+  - duplicated:isort
+
+ruff:
+  disable:
+    - D200 # One-line docstring should fit on one line, in conflict with ruff formatter
