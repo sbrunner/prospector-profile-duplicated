@@ -6,31 +6,7 @@ line-length = 110
 convention = "numpy"
 
 [tool.poetry]
-name = "prospector-profile-duplicated"
 version = "0.0.0"
-description = "Profile that can be used to disable the duplicated or conflict rules between Prospector and other tools"
-readme = "README.md"
-authors = ["Stéphane Brunner <stephane.brunner@gmail.com>"]
-homepage = "https://github.com/sbrunner/prospector-profile-duplicated"
-repository = "https://github.com/sbrunner/prospector-profile-duplicated"
-license = "BSD-2-Clause"
-classifiers = [
-  "Development Status :: 5 - Production/Stable",
-  "Intended Audience :: Developers",
-  "License :: OSI Approved :: BSD License",
-  "Operating System :: OS Independent",
-  "Programming Language :: Python",
-  "Programming Language :: Python :: 3"
-]
-packages = [
-  { include = "prospector_profile_duplicated" },
-  { include = "prospector_profile_duplicated/prospector.yaml" },
-  { include = "prospector_profile_duplicated/black.yaml" },
-  { include = "prospector_profile_duplicated/isort.yaml" },
-  { include = "prospector_profile_duplicated/pyupgrade.yaml" },
-  { include = "prospector_profile_duplicated/docformatter.yaml" },
-  { include = "prospector_profile_duplicated/pydocstyle.yaml" },
-]
 
 [tool.poetry.dependencies]
 prospector = ">=1.15.0"
@@ -42,6 +18,35 @@ pattern = "^((?P<epoch>\\d+)!)?(?P<base>\\d+(\\.\\d+)*)"
 
 [tool.poetry-plugin-tweak-dependencies-version]
 default = "present"
+
+[project]
+dynamic = ["dependencies", "version"]
+name = "prospector-profile-duplicated"
+description = "Profile that can be used to disable the duplicated or conflict rules between Prospector and other tools"
+readme = "README.md"
+license = "BSD-2-Clause"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3"
+]
+authors = [{name = "Stéphane Brunner",email = "stephane.brunner@gmail.com"}]
+packages = [
+  { include = "prospector_profile_duplicated" },
+  { include = "prospector_profile_duplicated/prospector.yaml" },
+  { include = "prospector_profile_duplicated/black.yaml" },
+  { include = "prospector_profile_duplicated/isort.yaml" },
+  { include = "prospector_profile_duplicated/pyupgrade.yaml" },
+  { include = "prospector_profile_duplicated/docformatter.yaml" },
+  { include = "prospector_profile_duplicated/pydocstyle.yaml" },
+]
+
+[project.urls]
+repository = "https://github.com/sbrunner/prospector-profile-duplicated"
+"Bug Tracker" = "https://github.com/sbrunner/prospector-profile-duplicated/issues"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning", "poetry-plugin-tweak-dependencies-version"]
