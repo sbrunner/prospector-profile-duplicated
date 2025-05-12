@@ -46,7 +46,7 @@ packages = [
 
 [project.urls]
 repository = "https://github.com/sbrunner/prospector-profile-duplicated"
-"Bug Tracker" = "https://github.com/sbrunner/prospector-profile-duplicated/issues"
+"Bug Tracker" = "None/issues"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning", "poetry-plugin-tweak-dependencies-version"]
