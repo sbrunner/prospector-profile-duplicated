@@ -28,8 +28,8 @@ repos:
       - id: prettier
         additional_dependencies:
           - prettier@3.5.3 # npm
-          - prettier-plugin-sh@0.17.2 # npm
-          - prettier-plugin-toml@2.0.4 # npm
+          - prettier-plugin-sh@0.17.4 # npm
+          - prettier-plugin-toml@2.0.5 # npm
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:
@@ -56,7 +56,7 @@ repos:
     hooks:
       - id: ripsecrets
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 40.0.6
+    rev: 40.36.8
     hooks:
       - id: renovate-config-validator
   - repo: https://github.com/sbrunner/jsonschema-validator
@@ -65,10 +65,10 @@ repos:
       - id: jsonschema-validator
         files: ^\.github/publish\.yaml$
   - repo: https://github.com/sbrunner/python-versions-hook
-    rev: 1.0.0
+    rev: 1.1.1
     hooks:
       - id: python-versions
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.8
+    rev: v0.11.12
     hooks:
       - id: ruff-format
