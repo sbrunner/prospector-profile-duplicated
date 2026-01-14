@@ -5,3 +5,6 @@ inherits:
 ruff:
   disable:
     - D200 # One-line docstring should fit on one line, in conflict with ruff formatter
+    # Ruff formatter conflict warnings:
+    # warning: The following rule may cause conflicts when used with the formatter: `COM812`. To avoid unexpected behavior, we recommend disabling this rule, either by removing it from the `lint.select` or `lint.extend-select` configuration, or adding it to the `lint.ignore` configuration.
+    - COM812 # Incompatible with ruff formatter
