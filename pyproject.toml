@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry-core==2.0.1", "poetry-dynamic-versioning==1.10.0", "poetry-plugin-tweak-dependencies-version==1.5.6"]
+requires = ["poetry-core==2.4.1", "poetry-dynamic-versioning==1.10.0", "poetry-plugin-tweak-dependencies-version==1.5.6"]
 build-backend = "poetry.core.masonry.api"
 
 [project]
@@ -39,7 +39,12 @@ line-length = 110
 convention = "numpy"
 
 [tool.poetry]
+name = "prospector-profile-duplicated"
+description = "Profile that can be used to disable the duplicated or conflict rules between Prospector and other tools"
 version = "0.0.0"
+authors = ["Stéphane Brunner <stephane.brunner@gmail.com>"]
+readme = "README.md"
+license = "BSD-2-Clause"
 
 [tool.poetry.dependencies]
 prospector = ">=1.15.0"
