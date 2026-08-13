@@ -15,8 +15,6 @@ license = "BSD-2-Clause"
 
 [tool.poetry.dependencies]
 prospector = ">=1.15.0"
-ruff = "0.15.7"
-pylint = "4.0.5"
 
 [tool.poetry-dynamic-versioning]
 enable = true
