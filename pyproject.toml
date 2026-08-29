@@ -54,5 +54,5 @@ repository = "https://github.com/sbrunner/prospector-profile-duplicated"
 "Bug Tracker" = "https://github.com/sbrunner/prospector-profile-duplicated/issues"
 
 [build-system]
-requires = ["poetry-core==2.4.0", "poetry-dynamic-versioning[plugin]==1.10.0", "poetry-plugin-tweak-dependencies-version==1.5.6"]
+requires = ["poetry-core==2.0.1", "poetry-dynamic-versioning[plugin]==1.10.0", "poetry-plugin-tweak-dependencies-version==1.5.6"]
 build-backend = "poetry.core.masonry.api"
