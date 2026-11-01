@@ -55,7 +55,7 @@ repository = "https://github.com/sbrunner/prospector-profile-duplicated"
 
 [build-system]
 requires = [
-  "poetry-dynamic-versioning[plugin]==1.10.0",
+  "poetry-dynamic-versioning[plugin]==1.10.1",
   "poetry-plugin-tweak-dependencies-version==1.5.7",
 ]
 build-backend = "poetry.core.masonry.api"
