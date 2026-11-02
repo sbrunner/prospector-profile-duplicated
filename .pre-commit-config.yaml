@@ -13,7 +13,7 @@ repos:
       - id: trailing-whitespace
       - id: mixed-line-ending
   - repo: https://github.com/sbrunner/hooks
-    rev: 1.8.0
+    rev: 1.9.0
     hooks:
       - id: copyright
       - id: workflows-require-timeout
@@ -27,7 +27,7 @@ repos:
     hooks:
       - id: prettier
         additional_dependencies:
-          - prettier@3.9.9 # npm
+          - prettier@3.9.10 # npm
           - prettier-plugin-sh@0.20.2 # npm
           - prettier-plugin-toml@4.1.0 # npm
   - repo: https://github.com/shellcheck-py/shellcheck-py
@@ -56,7 +56,7 @@ repos:
     hooks:
       - id: ripsecrets
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 44.115.2
+    rev: 44.181.6
     hooks:
       - id: renovate-config-validator
   - repo: https://github.com/sbrunner/jsonschema-validator
@@ -65,10 +65,10 @@ repos:
       - id: jsonschema-validator
         files: ^\.github/publish\.yaml$
   - repo: https://github.com/sbrunner/python-versions-hook
-    rev: 1.4.1
+    rev: 1.7.0
     hooks:
       - id: python-versions
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.9
+    rev: v0.17.2
     hooks:
       - id: ruff-format
